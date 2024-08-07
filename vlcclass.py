@@ -12,7 +12,7 @@ class player:
         self.songs = []
         self.song_index = 0
 
-    def list_songs(directory):
+    def list_songs(self, directory):
         song_list = []
         for root, _, files in os.walk(directory):
             for file in files:
