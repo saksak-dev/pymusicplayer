@@ -6,6 +6,8 @@ import vlc
 
 
 musicplayer = vlcclass.player()
+
+#TODO switch to curses
 def on_press(key):
     try:
         if key == keyboard.Key.left:
