@@ -2,7 +2,7 @@ import os
 import vlc
 
 
-class player:
+class Player:
 
     def __init__(self):
         self.volume = 80

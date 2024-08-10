@@ -5,7 +5,7 @@ from pynput import keyboard
 import vlc
 
 
-musicplayer = vlcclass.player()
+musicplayer = vlcclass.Player()
 
 #TODO switch to curses
 def on_press(key):
@@ -36,7 +36,7 @@ def on_press(key):
             for index, song in enumerate(musicplayer.songs):
                 print(f"\033[1m{index + 1}\033[0m {song} ")
             song_number = input("Please enter the song number to delete:\n")
-            musicplayer.del_song(song_number)d
+            musicplayer.del_song(song_number)
             print()
     except AttributeError:
         # Handle special keys
