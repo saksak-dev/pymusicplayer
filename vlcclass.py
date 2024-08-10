@@ -56,16 +56,16 @@ class player:
         current = "playing" if self.is_playing else "paused"
         print(f"Track is now {current}")
 
-    def del_song(self, song_number):
+    def del_song(self, song_number, playlist):
         """deletes song by number"""
         try:
-            if 0 <= int(song_number) - 1 < len(self.songs):
-                del self.songs[int(song_number) - 1]
+            if 0 <= int(song_number) - 1 < len(playlist):
+                del playlist[int(song_number) - 1]
                 print("Song deleted")
             else:
                 print("Invalid song number")
         except ValueError:
             print("Invalid input")
 
-        for index, song in enumerate(self.songs):
+        for index, song in enumerate(playlist):
             print(f"\033[1m{index + 1}\033[0m {song} ")
